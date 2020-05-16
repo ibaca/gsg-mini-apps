@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>me</groupId>
+    <artifactId>gsg-mini-apps</artifactId>
+    <version>HEAD-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <description>GWT Starting Guide Mini APPs.</description>
+
+    <modules>
+        <module>combine</module>
+        <module>maze</module>
+        <module>requests</module>
+        <module>wheelzoom</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt</artifactId>
+                <version>2.9.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>net.ltgt.gwt.maven</groupId>
+                    <artifactId>gwt-maven-plugin</artifactId>
+                    <version>1.0.0</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <skipModule>true</skipModule>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <configuration>
+                    <startupUrls>/</startupUrls>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

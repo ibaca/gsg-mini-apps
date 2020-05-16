@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>me</groupId>
+        <artifactId>gsg-mini-apps</artifactId>
+        <version>HEAD-SNAPSHOT</version>
+    </parent>
+    <artifactId>wheelzoom</artifactId>
+    <packaging>gwt-app</packaging>
+
+    <dependencies><!-- @formatter:off -->
+        <dependency><groupId>com.google.gwt</groupId><artifactId>gwt-user</artifactId></dependency>
+        <dependency><groupId>com.google.gwt</groupId><artifactId>gwt-dev</artifactId></dependency>
+        <dependency><groupId>org.jboss.gwt.elemento</groupId><artifactId>elemento-core</artifactId><version>0.9.1-gwt2</version></dependency>
+        <dependency><groupId>com.intendia.gwt.rxgwt2</groupId><artifactId>rxgwt</artifactId><version>2.2</version></dependency>
+        <dependency><groupId>com.intendia.gwt</groupId><artifactId>rxjava2-gwt</artifactId><version>2.2.10-gwt1</version></dependency>
+    </dependencies><!-- @formatter:on -->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <moduleName>wheelzoom.WheelZoom</moduleName>
+                    <skipModule>true</skipModule>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
